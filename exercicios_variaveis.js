@@ -37,11 +37,11 @@ console.log(typeof nomeCarro);
 // 5. Escreva um bloco `if` que declare uma variável `let` dentro dele. Tente exibir essa variável fora do bloco (comente a linha que causa erro).
 
 if (true) {
-    let nomePais = "Brasil" // O erro está aqui, pois o valor de nomePais ficará dentro do bloco.
+    //let nomePais = "Brasil" // O erro está aqui, pois o valor de nomePais ficará dentro do bloco.
 }
 
-console.log("Nome do pais:" + nomePais);
-console.log("Essa variavel é do tipo: " + typeof nomePais);  
+// console.log("Nome do pais:" + nomePais);
+// console.log("Essa variavel é do tipo: " + typeof nomePais);  
 
 // 6. Tente redeclarar uma variável usando `var` no mesmo escopo. Faça o mesmo com `let` e observe o erro.
 var primeiroTeste = "Olá"
@@ -56,12 +56,28 @@ console.log("No caso do segundo teste, sinaliza que ele já foi declarado.")
 // 7. Declare uma variável com `const` que contém um objeto com duas propriedades. Altere uma dessas propriedades e exiba o objeto.
 
 const aluno = {
-    nome: "Fulano",
-    curso: "ADS"
+    nome: "Fulano", // Nome do aluno
+    curso: "ADS" // Curso do 
 }
+aluno.curso = "enfermagem";
+console.log(typeof aluno) // 
 
 // 8. Declare uma variável com `let` sem inicializá-la. Depois atribua um valor e exiba.
+let variavelPraDepois
+variavelPraDepois = "Testando"
+console.log(variavelPraDepois);
+console.log(typeof variavelPraDepois);
+// A variavel foi criada, porém o valor somente foi declarado depois.
 
 // 9. Demonstre hoisting declarando uma variável com `var` depois de usá-la (exiba antes da declaração).
+console.log(testeHosting);
+let testeHosting = "Testando o hosting"
+// Me é sinalizado que não é possível acessar uma variavel antes de inicializa-la.
 
 // 10. Crie uma função que declare uma variável `var` dentro dela e tente acessar essa variável fora da função (explique o resultado).
+function nome() {
+    var nomeDoProfessor = "Rodrigo"
+    return nomeDoProfessor
+}
+const professor = nome();
+console.log(professor)
